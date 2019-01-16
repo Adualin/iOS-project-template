@@ -9,8 +9,33 @@ inhibit_all_warnings!
 
 target '{{cookiecutter.app_name}}' do
 
-  pod 'R.swift', '5.0.0'
-  pod 'SwiftLint', '0.29.2'
+  # Networking
+  pod 'Moya/RxSwift', '~> 12.0'  # https://github.com/Moya/Moya
+  pod 'ReachabilitySwift', '~> 4.0' # https://github.com/ashleymills/Reachability.swift
+
+  # Rx Extensions
+  pod 'RxDataSources', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxDataSources
+  pod 'RxSwiftExt', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxSwiftExt
+  pod 'NSObject+Rx', '~> 4.0'  # https://github.com/RxSwiftCommunity/NSObject-Rx
+  pod 'RxViewController', '~> 0.3'  # https://github.com/devxoul/RxViewController
+  pod 'RxGesture', '~> 2.0'  # https://github.com/RxSwiftCommunity/RxGesture
+  pod 'RxOptional', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxOptional
+  pod 'RxTheme', '~> 2.0'  # https://github.com/RxSwiftCommunity/RxTheme
+
+  # JSON Mapping
+  pod 'Moya-ObjectMapper/RxSwift', :git => 'https://github.com/hankbao/Moya-ObjectMapper.git' #'~> 2.0'  # https://github.com/ivanbruel/Moya-ObjectMapper
+
+  # Image
+  pod 'Kingfisher', '~> 4.0'  # https://github.com/onevcat/Kingfisher 
+
+  # Tools
+  pod 'R.swift', '~> 5.0.0'  #, '~> 4.0'  # https://github.com/mac-cain13/R.swift
+  pod 'SwiftLint', '0.29.3'  # https://github.com/realm/SwiftLint
+  pod 'Swinject'
+  
+  # Code Quality
+  pod 'FLEX', :git => 'https://github.com/Flipboard/FLEX.git'  # https://github.com/Flipboard/FLEX
+  pod 'SwifterSwift', '~> 4.6.0'  # https://github.com/SwifterSwift/SwifterSwift
 
   target '{{cookiecutter.app_name}}Tests' do
     inherit! :search_paths
