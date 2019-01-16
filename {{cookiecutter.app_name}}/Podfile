@@ -11,7 +11,6 @@ target '{{cookiecutter.app_name}}' do
 
   # Networking
   pod 'Moya/RxSwift', '~> 12.0'  # https://github.com/Moya/Moya
-  pod 'ReachabilitySwift', '~> 4.0' # https://github.com/ashleymills/Reachability.swift
 
   # Rx Extensions
   pod 'RxDataSources', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxDataSources
