@@ -3,10 +3,6 @@
 A template to jumpstart your next iOS project integrating best practices and tools.
 Supports Xcode 10, Swift 4.2, RxSwift and other libs.
 
----
-
-Tip: Forked from [pgorzelany/iOS-project-template](https://github.com/pgorzelany/iOS-project-template), Thanks for such a great idea!
-
 ## Motivation
 
 When working for early stage startups I frequently had to start new projects from scratch. While doing this I noticed that I am spending a lot of time doing basic project setup and integrating basic tools and best practices in all projects from scratch.
@@ -68,3 +64,8 @@ bundle exec pod install
 ## Additional configuration
 
 You will have to manually configure the bundle id of the main target and test target.
+
+--- 
+
+## Thanks 
+This template forked from [pgorzelany/iOS-project-template](https://github.com/pgorzelany/iOS-project-template), [@pgorzelany](https://github.com/pgorzelany) ❤️ Thanks for such a great idea!
