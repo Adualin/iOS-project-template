@@ -11,7 +11,7 @@ target '{{cookiecutter.app_name}}' do
 
   # Networking
   pod 'Moya/RxSwift', '~> 12.0'  # https://github.com/Moya/Moya
-
+  pod 'ReachabilitySwift', '~> 4.0' # https://github.com/ashleymills/Reachability.swift
   # Rx Extensions
   pod 'RxDataSources', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxDataSources
   pod 'RxSwiftExt', '~> 3.0'  # https://github.com/RxSwiftCommunity/RxSwiftExt
@@ -26,7 +26,12 @@ target '{{cookiecutter.app_name}}' do
 
   # Image
   pod 'Kingfisher', '~> 4.0'  # https://github.com/onevcat/Kingfisher 
-
+  # Animation
+  pod 'Hero', '~> 1.4.0'  # https://github.com/lkzhao/Hero
+  # Logging
+  pod 'CocoaLumberjack/Swift', '~> 3.0'  # https://github.com/CocoaLumberjack/CocoaLumberjack
+  # Auto Layout
+  pod 'SnapKit', '~> 4.0'  # https://github.com/SnapKit/SnapKit
   # Tools
   pod 'R.swift', '~> 5.0.0'  #, '~> 4.0'  # https://github.com/mac-cain13/R.swift
   pod 'SwiftLint', '0.29.3'  # https://github.com/realm/SwiftLint
@@ -35,7 +40,8 @@ target '{{cookiecutter.app_name}}' do
   # Code Quality
   pod 'FLEX', :git => 'https://github.com/Flipboard/FLEX.git'  # https://github.com/Flipboard/FLEX
   pod 'SwifterSwift', '~> 4.6.0'  # https://github.com/SwifterSwift/SwifterSwift
-
+  # UI
+  pod 'DZNEmptyDataSet', '~> 1.0'  # https://github.com/dzenbot/DZNEmptyDataSet
   target '{{cookiecutter.app_name}}Tests' do
     inherit! :search_paths
   end

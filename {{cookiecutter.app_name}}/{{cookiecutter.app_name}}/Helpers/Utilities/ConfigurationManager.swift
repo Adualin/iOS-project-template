@@ -6,6 +6,16 @@
 //
 
 import Foundation
+import SnapKit
+import CocoaLumberjack
+import Kingfisher
+import FLEX
+import NSObject_Rx
+import RxViewController
+import RxOptional
+import RxGesture
+import SwifterSwift
+import Hero
 
 /**
  Use the Configuration.plist file to provide variables dependent on build configuration.
@@ -68,5 +78,50 @@ class ConfigurationManager {
             fatalError("Backend URL missing")
         }
         return backendUrl
+    }
+    
+    func setupLibs(with window: UIWindow? = nil) {
+        let libsManager = ConfigurationManager.shared
+        libsManager.setupCocoaLumberjack()
+        libsManager.setupKingfisher()
+        libsManager.setupFLEX()
+    }
+    
+    func setupKingfisher() {
+        // Set maximum disk cache size for default cache. Default value is 0, which means no limit.
+        ImageCache.default.maxDiskCacheSize = UInt(500 * 1024 * 1024) // 500 MB
+        
+        // Set longest time duration of the cache being stored in disk. Default value is 1 week
+        ImageCache.default.maxCachePeriodInSecond = TimeInterval(60 * 60 * 24 * 7) // 1 week
+        
+        // Set timeout duration for default image downloader. Default value is 15 sec.
+        ImageDownloader.default.downloadTimeout = 15.0 // 15 sec
+    }
+    
+    func setupCocoaLumberjack() {
+        DDLog.add(DDTTYLogger.sharedInstance) // TTY = Xcode console
+        //        DDLog.add(DDASLLogger.sharedInstance) // ASL = Apple System Logs
+        
+        let fileLogger: DDFileLogger = DDFileLogger() // File Logger
+        fileLogger.rollingFrequency = TimeInterval(60*60*24)  // 24 hours
+        fileLogger.logFileManager.maximumNumberOfLogFiles = 7
+        DDLog.add(fileLogger)
+    }
+    func setupFLEX() {
+        FLEXManager.shared().isNetworkDebuggingEnabled = true
+    }
+}
+
+extension ConfigurationManager {
+    
+    func showFlex() {
+        FLEXManager.shared().showExplorer()
+    }
+    
+    func removeKingfisherCache(completion handler: (() -> Void)?) {
+        ImageCache.default.clearMemoryCache()
+        ImageCache.default.clearDiskCache {
+            handler?()
+        }
     }
 }

@@ -2,7 +2,7 @@
 //  Navigator.swift
 //  {{cookiecutter.app_name}}
 //
-//  Created by Cyan on 2019/1/16.
+//
 //  Copyright © 2019 {{cookiecutter.company_name}}. All rights reserved.
 //
 
@@ -16,7 +16,7 @@ class Navigator {
     static var `default` = Navigator()
     
     enum Scene {
-        
+        case main
     }
     
     enum Transition {
@@ -30,7 +30,16 @@ class Navigator {
     }
     
     func get(segue: Scene) -> UIViewController? {
-        return nil
+        switch segue {
+        case .main:
+            let rootVC = UIViewController()
+            rootVC.view.backgroundColor = UIColor.random
+            let detailNavVC = UITableViewController()
+            detailNavVC.view.backgroundColor = UIColor.random
+            let splitVC = SplitViewController()
+            splitVC.viewControllers = [rootVC, detailNavVC]
+            return splitVC
+        }
     }
     
     func pop(sender: UIViewController?, toRoot: Bool = false) {

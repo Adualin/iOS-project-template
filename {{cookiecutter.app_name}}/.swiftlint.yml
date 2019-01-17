@@ -1,5 +1,6 @@
 disabled_rules:
   - todo
+  - trailing_whitespace
 opt_in_rules:
   - attributes
   - closure_end_indentation
@@ -34,3 +35,5 @@ identifier_name:
     - at
     - of
     - up
+    - x
+    - y
