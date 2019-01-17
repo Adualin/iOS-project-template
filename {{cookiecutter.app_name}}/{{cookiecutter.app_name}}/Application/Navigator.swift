@@ -32,7 +32,7 @@ class Navigator {
     func get(segue: Scene) -> UIViewController? {
         switch segue {
         case .main:
-            let rootVC = UIViewController()
+            let rootVC = R.storyboard.main.instantiateInitialViewController()!
             rootVC.view.backgroundColor = UIColor.random
             let detailNavVC = UITableViewController()
             detailNavVC.view.backgroundColor = UIColor.random

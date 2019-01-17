@@ -29,6 +29,8 @@
 		870F10B121F01BAC0030057E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F10B021F01BAC0030057E /* ViewModelType.swift */; };
 		870F10B321F01BDB0030057E /* LogManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F10B221F01BDB0030057E /* LogManager.swift */; };
 		870F10B821F01E350030057E /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F10B721F01E350030057E /* SplitViewController.swift */; };
+		870F110121F051CE0030057E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 870F110021F051CE0030057E /* Main.storyboard */; };
+		870F110321F051E50030057E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 870F110221F051E50030057E /* ViewController.swift */; };
 		C90395241FC622D2006F1DC0 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395231FC622D2006F1DC0 /* main.swift */; };
 		C90395261FC62399006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
 		C90395271FC62425006F1DC0 /* TestsAppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C90395251FC62399006F1DC0 /* TestsAppDelegate.swift */; };
@@ -78,6 +80,8 @@
 		870F10B021F01BAC0030057E /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		870F10B221F01BDB0030057E /* LogManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogManager.swift; sourceTree = "<group>"; };
 		870F10B721F01E350030057E /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		870F110021F051CE0030057E /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		870F110221F051E50030057E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		99CA1EA89F7C728E6B927E9F /* Pods-{{cookiecutter.app_name}}.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-{{cookiecutter.app_name}}.release.xcconfig"; path = "Pods/Target Support Files/Pods-{{cookiecutter.app_name}}/Pods-{{cookiecutter.app_name}}.release.xcconfig"; sourceTree = "<group>"; };
 		A3D47707BCF287B4E1AD4498 /* Pods-{{cookiecutter.app_name}}Tests.staging.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-{{cookiecutter.app_name}}Tests.staging.xcconfig"; path = "Pods/Target Support Files/Pods-{{cookiecutter.app_name}}Tests/Pods-{{cookiecutter.app_name}}Tests.staging.xcconfig"; sourceTree = "<group>"; };
 		B9E5B4371188FCFED220B2FF /* Pods-{{cookiecutter.app_name}}Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-{{cookiecutter.app_name}}Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-{{cookiecutter.app_name}}Tests/Pods-{{cookiecutter.app_name}}Tests.release.xcconfig"; sourceTree = "<group>"; };
@@ -292,6 +296,7 @@
 			isa = PBXGroup;
 			children = (
 				870F10B721F01E350030057E /* SplitViewController.swift */,
+				870F110221F051E50030057E /* ViewController.swift */,
 			);
 			path = BaseComponents;
 			sourceTree = "<group>";
@@ -299,6 +304,7 @@
 		870F10B421F01DB00030057E /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				870F110021F051CE0030057E /* Main.storyboard */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -413,6 +419,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2ABEE6D41F38856A00531205 /* Configuration.plist in Resources */,
+				870F110121F051CE0030057E /* Main.storyboard in Resources */,
 				FCB2C7CB1F57127800481080 /* Localizable.strings in Resources */,
 				2A1E77411F384BFD006C84D4 /* LaunchScreen.storyboard in Resources */,
 				2A1E773E1F384BFD006C84D4 /* Assets.xcassets in Resources */,
@@ -600,6 +607,7 @@
 				2A1DD4DF1F389C2200712195 /* DeeplinkHandler.swift in Sources */,
 				870F10B321F01BDB0030057E /* LogManager.swift in Sources */,
 				870F10B121F01BAC0030057E /* ViewModelType.swift in Sources */,
+				870F110321F051E50030057E /* ViewController.swift in Sources */,
 				870F10AF21F019490030057E /* API.swift in Sources */,
 				870F10AD21F018F40030057E /* ActivityIndicator.swift in Sources */,
 			);
