@@ -1,7 +1,11 @@
 ## iOS Project Template
 
 A template to jumpstart your next iOS project integrating best practices and tools.
-Supports Xcode 10, Swift 4.2
+Supports Xcode 10, Swift 4.2, RxSwift and other libs.
+
+---
+
+Tip: Forked from [pgorzelany/iOS-project-template](https://github.com/pgorzelany/iOS-project-template), Thanks for such a great idea!
 
 ## Motivation
 
@@ -35,7 +39,7 @@ brew install cookiecutter
 The project uses Cookiecutter for project templating. To create a new project from this template just run:
 
 ```
-cookiecutter https://github.com/pgorzelany/iOS-project-template.git
+cookiecutter https://github.com/Adualin/iOS-project-template
 ```
 
 You will get a prompt to give a new app name. Thats it, you should have a new folder with your new app created based on this template!
