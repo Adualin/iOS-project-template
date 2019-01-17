@@ -58,7 +58,7 @@ bundle install
 Then install the pods
 
 ```
-bundle exec pod install
+bundle exec fastlane setup
 ```
 
 ## Additional configuration
